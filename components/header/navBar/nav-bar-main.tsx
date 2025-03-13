@@ -8,8 +8,8 @@ import {navItems} from "@/components/header/navBar/navBarConfig";
 import {LinkPreview} from "@/components/header/navBar/link-Preview/link-preview";
 import {InteractiveHoverButton} from "@/components/button/button";
 import {Magnetic} from "@/components/animations/Magnetic-motion";
-import {SideBar, SidebarDemo} from "@/components/header/navBar/NavBar-Mobile";
-import {ReactLenis} from "lenis/react";
+import {SideBar} from "@/components/header/navBar/NavBar-Mobile";
+
 
 
 // export function NavbarDemo() {
@@ -50,7 +50,7 @@ function Navbar({ className }: { className?: string }) {
                     return <MenuItem key={tab.menuId} setActive={setActive} active={active} item={tab.menuName}>
                         {tab.menuItemsType?
 
-                            <div className="h-[60vh] overflow-y-scroll" data-lenis-prevent>
+                            <div className="h-[60vh] overflow-y-scroll" data-lenis-prevent={true}>
                                 {tab.menuItems.map((menu) => {
                                     const truncatedDescription =
                                         menu.description.length > 100 ? menu.description.substring(0, 100) + " ..." : menu.description;
