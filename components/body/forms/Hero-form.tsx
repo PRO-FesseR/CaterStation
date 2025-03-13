@@ -13,7 +13,7 @@ export default function HeroForm(){
                 delay: 0.8
 
             }}
-            className="ease relative flex h-10 w-[40%]  items-center rounded-[30px] bg-gray-100 pl-3 pr-3 duration-500 before:absolute before:bottom-0 before:left-0 before:h-[3px] before:w-full before:origin-center before:scale-x-0 before:rounded-[1px] before:bg-lime-600 before:transition-all before:duration-500 before:content-[''] focus-within:rounded-[1px] focus-within:before:scale-100 dark:bg-gray-800 dark:before:bg-lime-500"
+            className="ease relative flex h-10 md:w-[40%] w-full md:mt-7 mt-5.5 items-center rounded-[30px] bg-gray-100 pl-3 pr-3 duration-500 before:absolute before:bottom-0 before:left-0 before:h-[3px] before:w-full before:origin-center before:scale-x-0 before:rounded-[1px] before:bg-lime-600 before:transition-all before:duration-500 before:content-[''] focus-within:rounded-[1px] focus-within:before:scale-100 dark:bg-gray-800 dark:before:bg-lime-500"
             // onSubmit={function E() {
             // }}
         >
@@ -39,7 +39,7 @@ export default function HeroForm(){
                 </svg>
             </button>
             <input
-                className="h-full w-full bg-transparent text-[0.9rem] text-black focus:outline-none dark:text-white [&:not(:placeholder-shown)~button]:visible [&:not(:placeholder-shown)~button]:opacity-100"
+                className="h-full w-full bg-transparent text-sm md:text-[0.9rem] text-black focus:outline-none dark:text-white [&:not(:placeholder-shown)~button]:visible [&:not(:placeholder-shown)~button]:opacity-100"
                 placeholder="Search Your Favorite Vendors here..."
                 required
                 type="text"

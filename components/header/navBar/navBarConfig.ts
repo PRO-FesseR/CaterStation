@@ -10,17 +10,22 @@ type natItemsType =
         menuId:number,
         menuName:string,
         menuItemsType:number,
-        menuItems:
-            {
-            name:string,
-            href:string,
-            src:string | '',
-            description:string | '',
-            logo:IconType  | undefined
-        }[]
+        menuItems: menuItem
 
     }[]
 
+
+
+
+
+export type menuItem ={
+    name:string,
+    href:string,
+    src:string | '',
+    description:string | '',
+    logo:IconType  | undefined
+
+}[]
 
 
 export const navItems:natItemsType = [
@@ -63,6 +68,38 @@ export const navItems:natItemsType = [
             src:'https://img.freepik.com/free-vector/beautiful-food-menu-design-template_23-2149061881.jpg',
             description:'Caterstation presents a wide range of exclusive promotions and special offers crafted to enhance your event experience.\n' +
                 'Discover these offers so that you can elevate your event by saving more!',
+                logo:undefined
+            },
+            {
+                name:'CaterStation Launch',
+                href:'/',
+                src:'https://sunday.com.pk/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-20-at-11.04.39.jpg',
+                description:'Caterstation presents a wide range of exclusive promotions and special offers crafted to enhance your event experience.\n' +
+                    'Discover these offers so that you can elevate your event by saving more!',
+                logo:undefined
+            },
+            {
+                name:'CaterStation 2Launch',
+                href:'/',
+                src:'https://sunday.com.pk/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-20-at-11.04.39.jpg',
+                description:'Caterstation presents a wide range of exclusive promotions and special offers crafted to enhance your event experience.\n' +
+                    'Discover these offers so that you can elevate your event by saving more!',
+                logo:undefined
+            },
+            {
+                name:'CaterStation 1Launch',
+                href:'/',
+                src:'https://sunday.com.pk/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-20-at-11.04.39.jpg',
+                description:'Caterstation presents a wide range of exclusive promotions and special offers crafted to enhance your event experience.\n' +
+                    'Discover these offers so that you can elevate your event by saving more!',
+                logo:undefined
+            },
+            {
+                name:'CaterStation 21Launch',
+                href:'/',
+                src:'https://sunday.com.pk/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-20-at-11.04.39.jpg',
+                description:'Caterstation presents a wide range of exclusive promotions and special offers crafted to enhance your event experience.\n' +
+                    'Discover these offers so that you can elevate your event by saving more!',
                 logo:undefined
             },
 

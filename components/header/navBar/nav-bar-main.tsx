@@ -7,6 +7,9 @@ import Image from "next/image";
 import {navItems} from "@/components/header/navBar/navBarConfig";
 import {LinkPreview} from "@/components/header/navBar/link-Preview/link-preview";
 import {InteractiveHoverButton} from "@/components/button/button";
+import {Magnetic} from "@/components/animations/Magnetic-motion";
+import {SideBar, SidebarDemo} from "@/components/header/navBar/NavBar-Mobile";
+import {ReactLenis} from "lenis/react";
 
 
 // export function NavbarDemo() {
@@ -22,13 +25,16 @@ export function NavbarMenu() {
     return (
         <>
 
-        <div className=" w-full flex   py-6 items-center justify-around">
+        <div className=" w-full flex  border-b-2 border-blue py-3  items-center px-3 lg:px-0 justify-between lg:justify-around">
+
             <Image src={caterStationLogo} alt="Cater Station Logo"/>
             <Navbar className="top-2 " />
             <div className="flex gap-3">
-            <InteractiveHoverButton className="w-[17rem]!" text="Sign up" />
+                <Magnetic>
+            <InteractiveHoverButton className="w-[17rem]! lg:block hidden" text="Sign up" />
+                </Magnetic>
             </div>
-
+            <SideBar/>
         </div>
         </>
     );
@@ -42,18 +48,22 @@ function Navbar({ className }: { className?: string }) {
             <Menu setActive={setActive}>
                 {navItems.map(tab=>{
                     return <MenuItem key={tab.menuId} setActive={setActive} active={active} item={tab.menuName}>
-                        {tab.menuItemsType? tab.menuItems.map((menu)=>{
-                                const truncatedDescription =
-                                    menu.description.length > 100 ? menu.description.substring(0, 100) + " ..." : menu.description;
+                        {tab.menuItemsType?
+
+                            <div className="h-[60vh] overflow-y-scroll" data-lenis-prevent>
+                                {tab.menuItems.map((menu) => {
+                                    const truncatedDescription =
+                                        menu.description.length > 100 ? menu.description.substring(0, 100) + " ..." : menu.description;
 
 
-                                return <ProductItem key={menu.name}
-                                title={menu.name}
-                                href={menu.href}
-                                src={menu.src}
-                                description={truncatedDescription}
-                            />
-                        })
+                                    return <ProductItem key={menu.name}
+                                                        title={menu.name}
+                                                        href={menu.href}
+                                                        src={menu.src}
+                                                        description={truncatedDescription}
+                                    />
+                                })}
+                            </div>
 
                             :
                             <div className="flex flex-col gap-3 text-sm">

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { cn } from "@/utils/tailwindConfig/utils"
 import Image from "next/image";
-import CaterStationLogo from "@/public/logo/cater-station-nav-logo.png";
+import CaterStationLogo from "@/public/logo/cater-station-hat.png";
 
 interface BlurIntProps {
     word: string
@@ -31,7 +31,7 @@ export default function BlurIn({ word, className, variant, duration = 1 }: BlurI
                 "font-display font-bold tracking-[-0.02em] drop-shadow-sm ",
             )}
         >
-            <Image  src={CaterStationLogo} alt="Cater Station logo"/>
+            <Image className="transform -rotate-[25deg] -translate-x-10 md:-translate-x-3 lg:translate-y-2" src={CaterStationLogo} alt="Cater Station logo"/>
             {word}
         </motion.h1>
     )
