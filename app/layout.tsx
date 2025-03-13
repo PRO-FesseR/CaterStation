@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
 import { NavbarMenu} from "@/components/header/navBar/nav-bar-main";
-import {lexend, roboto} from "@/fonts/googleFonts";
+import {lexend} from "@/fonts/googleFonts";
 
 
 export const metadata: Metadata = {

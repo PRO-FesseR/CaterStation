@@ -111,15 +111,15 @@ export const ProductItem = ({
     );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
-    return (
-
-        <Link
-            {...rest}
-            className="text-neutral-700 flex items-center gap-2 hover:scale-105 transition hover:text-black "
-        >
-            {children}
-        </Link>
-
-    );
-};
+// export const HoveredLink = ({ children, ...rest }: any) => {
+//     return (
+//
+//         <Link
+//             {...rest}
+//             className="text-neutral-700 flex items-center gap-2 hover:scale-105 transition hover:text-black "
+//         >
+//             {children}
+//         </Link>
+//
+//     );
+// };
