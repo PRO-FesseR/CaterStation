@@ -4,7 +4,7 @@ import Link from "next/link";
 import LogoImage from '@/public/logo/cater-station-nav-logo.png'
 import Image from "next/image";
 import {Sidebar, SidebarBody, SidebarLink} from "@/components/header/navBar/navBar-menu";
-import {navItems} from "@/components/header/navBar/navBarConfig";
+import {navItems} from "@/components/config/navBarConfig";
 import {InteractiveHoverButton} from "@/components/Static-components/button/button";
 import {Magnetic} from "@/components/animations/Magnetic-motion";
 

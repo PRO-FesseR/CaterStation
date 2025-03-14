@@ -1,29 +1,36 @@
-import { cn } from "@/utils/tailwindConfig/utils"
+'use client'
+import {cn} from "@/utils/tailwindConfig/utils"
+import {motion} from "framer-motion";
+import {ReactNode} from "react";
 
 interface Props {
     max: number
-    value: number
+    value: { name: string, icon: ReactNode }
     min: number
     gaugePrimaryColor: string
     gaugeSecondaryColor: string
-    className?: string
+    className?: string,
+    delay:number
 }
 
 export function GaugeCircle({
                                 max = 100,
                                 min = 0,
-                                value = 0,
+                                value,
+                                delay,
                                 gaugePrimaryColor,
                                 gaugeSecondaryColor,
                                 className,
                             }: Props) {
     const circumference = 2 * Math.PI * 45
     const percentPx = circumference / 100
-    const currentPercent = ((value - min) / (max - min)) * 100
+    const currentPercent = ((100 - min) / (max - min)) * 100
+
+
 
     return (
         <div
-            className={cn("relative size-40 text-2xl font-semibold", className)}
+            className={cn("relative size-48 hover:scale-105  transition cursor-pointer rounded-full text-2xl font-semibold", className)}
             style={
                 {
                     "--circle-size": "100px",
@@ -50,7 +57,7 @@ export function GaugeCircle({
                         cx="50"
                         cy="50"
                         r="45"
-                        strokeWidth="10"
+                        strokeWidth="2"
                         strokeDashoffset="0"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -64,18 +71,30 @@ export function GaugeCircle({
                         }}
                     />
                 )}
-                <circle
+                <motion.circle
+                    initial={{
+                        strokeDasharray: `0px ${circumference}px`,
+                    }}
+                    whileInView={{
+                        strokeDasharray: `${currentPercent * percentPx}px ${circumference}px`,
+
+                    }}
+                    transition={{
+                        delay,
+                        duration: 0.8,
+                        type:'ease'
+                    }}
+                    viewport={{once:true}}
                     cx="50"
                     cy="50"
                     r="45"
-                    strokeWidth="10"
+                    strokeWidth="2"
                     strokeDashoffset="0"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="opacity-100"
                     style={{
                         stroke: gaugePrimaryColor,
-                        strokeDasharray: `${currentPercent * percentPx}px ${circumference}px`,
                         transition: "1s ease 0s, stroke 1s ease 0s",
                         transitionProperty: "stroke-dasharray,transform",
                         transform: "rotate(calc(-90deg + 5 * 0 * 3.6deg))",
@@ -90,8 +109,13 @@ export function GaugeCircle({
                     transitionDuration: "1s",
                 }}
             >
-            {Math.round(currentPercent)}
+              <div className="flex flex-col gap-2 font-light text-lg justify-center items-center">
+                    {value.name}
+                  {value.icon}
+                </div>
          </span>
         </div>
+
     )
 }
+

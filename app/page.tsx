@@ -1,5 +1,5 @@
 import { ReactLenis } from 'lenis/react';
-import BodyPage from "@/components/Hero/Body-page";
+import BodyPage from "@/components/body/Body-page";
 
 export default function Home() {
   return (

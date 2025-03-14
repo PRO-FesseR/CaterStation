@@ -5,33 +5,11 @@ import {TextLoop} from "@/components/animations/Text-loop-motion";
 import HeroForm from "@/components/Static-components/forms/Hero-form";
 import {InfiniteSlider} from "@/components/animations/HorizontalSlider-motion";
 import Image from "next/image";
-import pic1 from "@/public/Hero-Images/pic-1.jpg";
-import pic2 from "@/public/Hero-Images/pic-2.jpg";
-import pic3 from "@/public/Hero-Images/pic-3.jpg";
-import pic4 from "@/public/Hero-Images/pic-4.jpg";
-
-
-const images = [
-    {
-        imageId:0,
-        src:pic1,
-    },
-    {
-        imageId:1,
-        src:pic2,
-    },
-    {
-        imageId:2,
-        src:pic3,
-    },
-    {
-        imageId:3,
-        src:pic4,
-    },
+import {HeroImages} from "@/components/config/Hero-Images";
 
 
 
-]
+
 
 
 export default function HeroSection(){
@@ -40,7 +18,7 @@ export default function HeroSection(){
             className='text-black md:bg-gradient-to-r from-white to-transparent h-screen top-0  md:w-[100%] z-40 sticky '>
             <InfiniteSlider gap={0} className="absolute top-0  h-[120vh] md:w-[30%]! w-full right-0   "
                             direction='vertical'>
-                {images.map((image, idx) => (
+                {HeroImages.map((image, idx) => (
                     <BlurFade key={image.imageId} delay={0.25 + idx * 0.05} inView>
                         <Image
                             className="mb-4  w-[100%]  size-full rounded-lg object-contain"
@@ -62,7 +40,7 @@ export default function HeroSection(){
                     {/*<GradualSpacing className="lg:text-xl md:text-sm"*/}
                     {/*                text=" Make your Event management experience digitalized with Caterstation"/>*/}
                     <BlurFade delay={0.25} inView className="w-full md:w-[40%]  md:text-5xl text-xl">
-                        <h1> Make your Event management experience <TextLoop
+                        <h1 className="block"> Make your Event management experience <TextLoop
                             className=''
                             transition={{
                                 type: 'spring',
