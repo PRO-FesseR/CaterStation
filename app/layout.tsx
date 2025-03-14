@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${lexend.className} overflow-x-hidden antialiased`}
 
       >
-      <header className="z-10000 w-screen sticky top-0 z-40 bg-white">
+      <header className="z-10000 w-screen">
           <NavbarMenu />
       </header>
 

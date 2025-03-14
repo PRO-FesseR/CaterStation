@@ -260,7 +260,7 @@ export const MobileSidebar = ({
                                 ease: "easeInOut",
                             }}
                             className={cn(
-                                "fixed h-full w-full inset-0 bg-[#223455]  p-10 z-[100] flex flex-col justify-between",
+                                "fixed h-full w-full inset-0 bg-[#223455] py-4 px-5 z-[100] flex flex-col justify-between",
                                 className
                             )}
                         >
@@ -299,7 +299,7 @@ export const SidebarLink = ({
                 key={menuItem.name}
                 href={menuItem.href}
                 className={cn(
-                    "flex items-center text-2xl mt-[3%] justify-start gap-2 group/sidebar py-2",
+                    "flex items-center text-lg mt-[1%]  justify-start gap-2 group/sidebar py-2",
                     className
                 )}
                 {...props}

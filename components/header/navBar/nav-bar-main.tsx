@@ -5,8 +5,8 @@ import {  Menu, MenuItem, ProductItem } from "@/components/header/navBar/navBar-
 import { cn } from "@/utils/tailwindConfig/utils";
 import Image from "next/image";
 import {navItems} from "@/components/header/navBar/navBarConfig";
-import {LinkPreview} from "@/components/header/navBar/link-Preview/link-preview";
-import {InteractiveHoverButton} from "@/components/button/button";
+import {LinkPreview} from "@/components/Static-components/link-Preview/link-preview";
+import {InteractiveHoverButton} from "@/components/Static-components/button/button";
 import {Magnetic} from "@/components/animations/Magnetic-motion";
 import {SideBar} from "@/components/header/navBar/NavBar-Mobile";
 
@@ -25,13 +25,13 @@ export function NavbarMenu() {
     return (
         <>
 
-        <div className=" w-full flex  border-b-2 border-blue py-3  items-center px-3 lg:px-0 justify-between lg:justify-around">
+        <div className=" w-screen fixed top-0 z-10000 bg-white flex  border-b-2 border-blue py-3  items-center px-3 lg:px-0 justify-between lg:justify-around">
 
             <Image src={caterStationLogo} alt="Cater Station Logo"/>
             <Navbar className="top-2 " />
             <div className="flex gap-3">
                 <Magnetic>
-            <InteractiveHoverButton className="w-[17rem]! lg:block hidden" text="Sign up" />
+            <InteractiveHoverButton className="lg:w-[17rem]! md:w-[16rem] sm:block hidden" text="Sign up" />
                 </Magnetic>
             </div>
             <SideBar/>
