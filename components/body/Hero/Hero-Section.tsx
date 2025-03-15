@@ -16,7 +16,7 @@ export default function HeroSection(){
     return (
         <section
             className='text-black md:bg-gradient-to-r from-white to-transparent h-screen top-0  md:w-[100%] z-40 sticky '>
-            <InfiniteSlider gap={0} className="absolute top-0  h-[120vh] md:w-[30%]! w-full right-0   "
+            <InfiniteSlider gap={0} className="absolute top-0  h-[100vh] md:w-[30%]! w-full right-0   "
                             direction='vertical'>
                 {HeroImages.map((image, idx) => (
                     <BlurFade key={image.imageId} delay={0.25 + idx * 0.05} inView>

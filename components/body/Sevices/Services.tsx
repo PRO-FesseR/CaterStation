@@ -10,7 +10,7 @@ import {servicesConfig} from "@/components/config/Services-config";
 export default function Services(){
     return (
         <section
-            className='bg-[#223454]  text-[#ffb934] py-[50px] md:py-0 z-50 md:h-[100vh] relative md:sticky  md:top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden'>
+            className='bg-[var(--color-accent-brand-blue)]  text-[var(--color-accent-brand-yellow)] py-[50px] md:py-0 z-50 md:h-[100vh] relative md:sticky  md:top-0 rounded-tr-2xl rounded-tl-2xl overflow-hidden'>
             <div
                 className='absolute bottom-0 left-0 right-0 top-0 '></div>
 

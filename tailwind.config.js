@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import defaultTheme from "tailwindcss/defaultTheme";
-import colors from "tailwindcss/colors";
+
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 module.exports = {
   content: [
@@ -9,16 +8,22 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode:false,
+  darkMode: false,
   theme: {
     extend: {
-      colors:{
-        blue:'#263455'
-      }
+      keyframes: {
+        "rotate-full": {
+          "0%": {transform: "rotate(0deg)"},
+          "100%": {transform: "rotate(360deg)"},
+        },
+        colors: {
+          blue: '#263455'
+        }
+      },
     },
-  },
-  plugins: [addVariablesForColors],
+    plugins: [addVariablesForColors],
 
+  }
 };
 
 
