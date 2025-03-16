@@ -8,6 +8,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+
     color-scheme: light !important;
     --radius: 0.625rem;
     --background: oklch(1 0 0);
@@ -141,5 +142,66 @@
 .orbit-reverse {
     animation: rotate-full 45s linear infinite reverse;
 }
+@keyframes marquee-x {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes marquee-x-reverse {
+    0% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+@keyframes marquee-y {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(calc(-100% - var(--gap)));
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes marquee-y-reverse {
+    0% {
+        transform: translateY(calc(-100% - var(--gap)));
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(-100% - var(--gap)));
+    }
+}
+
+.marquee-horizontal {
+    animation: marquee-x 70s infinite linear;
+}
+
+.marquee-horizontal-reverse {
+    animation: marquee-x-reverse 70s infinite linear;
+}
 
 
+.group:hover .marquee-horizontal,
+.group:hover .marquee-horizontal-reverse,
+.group:hover .marquee-vertical,
+.group:hover .marquee-vertical-reverse {
+    animation-play-state: paused;
+}

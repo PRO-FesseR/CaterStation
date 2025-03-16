@@ -31,7 +31,7 @@ const locations = [
 
 export default function CaterStationCities(){
     return(
-        <section className="h-screen mt-12 flex flex-col gap-14 px-20">
+        <section className=" mt-12 flex flex-col gap-14 px-20">
             <article className="flex gap-4 flex-col">
                 <BlurFade inView={true}>
                 <h2 className={`text-[var(--color-accent-brand-blue)] ${dancing_Script.className} text-center font-bold text-4xl md:text-6xl`}>Our Caterstations</h2>

@@ -36,7 +36,7 @@ export default function HeroSection(){
                 <div
                     className="flex flex-col items-center md:rounded-none rounded-xl md:shadow-none  md:gap-0 gap-4 z-50 md:p-0 p-10 md:bg-transparent  bg-white md:items-start w-full">
                     <BlurIn word="Cater Station"
-                            className={`${dancing_Script.className}  w-full lg:text-9xl md:text-8xl text-5xl text-[#263455]`}/>
+                            className={`${dancing_Script.className}  w-full lg:text-9xl md:text-8xl text-5xl text-[#263455]`} grayScale={false}/>
                     {/*<GradualSpacing className="lg:text-xl md:text-sm"*/}
                     {/*                text=" Make your Event management experience digitalized with Caterstation"/>*/}
                     <BlurFade delay={0.25} inView className="w-full md:w-[40%]  md:text-5xl text-xl">

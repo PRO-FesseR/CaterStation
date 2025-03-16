@@ -10,10 +10,11 @@ interface BlurIntProps {
     variant?: {
         hidden: { filter: string; opacity: number }
         visible: { filter: string; opacity: number }
-    }
+    },
+    grayScale:boolean,
     duration?: number
 }
-export default function BlurIn({ word, className, variant, duration = 1 }: BlurIntProps) {
+export default function BlurIn({ word, className, variant, duration = 1, grayScale=false }: BlurIntProps) {
     const defaultVariants = {
         hidden: { filter: "blur(10px)", opacity: 0 },
         visible: { filter: "blur(0px)", opacity: 1 },
@@ -31,7 +32,7 @@ export default function BlurIn({ word, className, variant, duration = 1 }: BlurI
                 "font-display font-bold tracking-[-0.02em] drop-shadow-sm ",
             )}
         >
-            <Image className="transform -rotate-[25deg] -translate-x-10 md:-translate-x-3 lg:translate-y-2" src={CaterStationLogo} alt="Cater Station logo"/>
+            <Image className={`transform -rotate-[25deg] -translate-x-10 md:-translate-x-3 lg:translate-y-2 ${grayScale? 'contrast-0':''}`} src={CaterStationLogo} alt="Cater Station logo"/>
             {word}
         </motion.h1>
     )

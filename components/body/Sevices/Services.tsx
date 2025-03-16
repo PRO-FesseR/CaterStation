@@ -31,7 +31,7 @@ export default function Services(){
                                             gaugeSecondaryColor={'rgba(32,47,81,0.1)'} max={100} min={0} delay={index *0.15}/>
                         </BlurFade>
                         <GaugeCircle  className="md:hidden block" value={service} gaugePrimaryColor={'#ffb934'}
-                                       gaugeSecondaryColor={'rgba(32,47,81,0.1)'} max={100} min={0} delay={0 }/>
+                                       gaugeSecondaryColor={'rgba(32,47,81,0.1)'} max={100} min={0} delay={0}/>
                         </div>
                     })}
 
