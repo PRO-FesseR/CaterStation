@@ -10,7 +10,6 @@ import {
     useSpring,
 } from "framer-motion";
 import Link from "next/link";
-import { cn } from "@/utils/tailwindConfig/utils";
 
 type LinkPreviewProps = {
     children: React.ReactNode;
@@ -28,7 +27,6 @@ type LinkPreviewProps = {
 export const LinkPreview = ({
                                 children,
                                 url,
-                                className,
                                 width = 200,
                                 height = 125,
                                 quality = 50,
@@ -98,14 +96,19 @@ export const LinkPreview = ({
                     setOpen(open);
                 }}
             >
-                <HoverCardPrimitive.Trigger
-                    onMouseMove={handleMouseMove}
-                    className={cn("text-black m-0 text-lg font-light   dark:text-white", className)}
-                    href={url}
-                >
-                    {children}
-                </HoverCardPrimitive.Trigger>
+                <Link href={url}>
+                    <HoverCardPrimitive.Trigger
+                        asChild
+                        onMouseMove={handleMouseMove}
+                    >
+                          <span className="text-black m-0 text-lg  flex items-center gap-2  font-light dark:text-white">
 
+                            {children}
+
+                                    </span>
+
+                    </HoverCardPrimitive.Trigger>
+                </Link>
                 <HoverCardPrimitive.Content
                     className="[transform-origin:var(--radix-hover-card-content-transform-origin)] fixed w-[200px] h-[125px] -top-3.5"
                     side="right"

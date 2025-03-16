@@ -10,6 +10,7 @@ import {
 import ScrollingTestimonials from "@/components/Static-components/Testimonial-Parralex/Testimony-marqueue";
 import {dancing_Script} from "@/fonts/googleFonts";
 import {BlurFade} from "@/components/animations/Blur-Fade-Magic";
+import {reviewConfig} from "@/components/config/ReviewsConfig";
 
 export const HeroParallax = () => {
 
@@ -48,7 +49,7 @@ export const HeroParallax = () => {
     return (
         <div
             ref={ref}
-            className="md:h-[240vh] py-40   antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="md:h-[240vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header/>
             <motion.div
@@ -100,43 +101,7 @@ export const ProductCard = () => {
             className="group/product md:h-96 w-[30rem] relative shrink-0"
         >
             <ScrollingTestimonials
-                data={[
-                    {
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam aspernatur!',
-                        image: 'https://plus.unsplash.com/premium_photo-1717529137991-510ad3be15d9?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        name: 'John Doe.'
-                    },
-                    {
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam aspernatur!',
-                        image: 'https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1921&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        name: 'Paul A'
-                    },
-                    {
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam aspernatur!',
-                        image: 'https://images.unsplash.com/photo-1560298803-1d998f6b5249?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        name: 'Jeff Roe'
-                    },
-                    {
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam aspernatur!',
-                        image: 'https://images.unsplash.com/photo-1518287010730-4386819bf3e9?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        name: 'Mex Q'
-                    },
-                    {
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nostrum labore dolor facilis, nesciunt facere mollitia nam aspernatur!',
-                        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        name: 'Cristina W'
-                    },
-                    {
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. ',
-                        image: 'https://images.unsplash.com/photo-1581092916357-5896ebc48073?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        name: 'Lanna Del Rey'
-                    },
-                    {
-                        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. ',
-                        image: 'https://images.unsplash.com/photo-1483389127117-b6a2102724ae?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        name: 'Paul Logan'
-                    }
-                ]}
+                data={reviewConfig}
             />
         </div>
     );

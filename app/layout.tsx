@@ -17,18 +17,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
-      <body
+    <html lang="en" className="light ">
+    <head>
+        <script
+            dangerouslySetInnerHTML={{
+                __html: `
+              window.addEventListener('load', function() {
+                document.documentElement.classList.remove('loading');
+              });
+            `,
+            }}
+        />
+    </head>
+    <body
         className={`${lexend.className} overflow-x-hidden antialiased`}
 
-      >
-      <header className="z-10000 w-screen">
-          <NavbarMenu />
-      </header>
+    >
 
-        {children}
+    <header className="z-10000 w-screen">
 
-      </body>
+        <NavbarMenu/>
+    </header>
+
+    {children}
+
+    </body>
+
     </html>
   );
 }

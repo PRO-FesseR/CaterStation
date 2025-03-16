@@ -17,7 +17,6 @@ const transition = {
 };
 
 export const MenuItem = ({
-
                              setActive,
                              active,
                              item,

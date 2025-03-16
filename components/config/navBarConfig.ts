@@ -36,7 +36,7 @@ export const navItems:natItemsType = [
         menuItems:[
             {
                 name:'Events',
-                href:'/',
+                href:'Area47',
                 src:'',
                 description:'',
                 logo:MdEvent

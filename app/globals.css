@@ -144,7 +144,7 @@
 }
 @keyframes marquee-x {
     0% {
-        transform: translateX(0);
+        transform: translateX();
     }
     50% {
         transform: translateX(calc(-100% - var(--gap)));
@@ -177,7 +177,9 @@
         transform: translateY(0);
     }
 }
-
+html.loading {
+    visibility: hidden;
+}
 @keyframes marquee-y-reverse {
     0% {
         transform: translateY(calc(-100% - var(--gap)));
@@ -204,4 +206,66 @@
 .group:hover .marquee-vertical,
 .group:hover .marquee-vertical-reverse {
     animation-play-state: paused;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-accent-brand-yellow);
+    overflow: hidden;
+    gap: 20px;
+
+}
+
+.loading-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2rem, 8vw, 6rem);
+    font-weight: bold;
+    color: #263455;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    transform: translateX(120px) translateY(10%) rotate(-25deg);
+    margin-right: 10px;
+
+}
+
+.loader-container {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background-color: #263455;
+    border-radius: 50%;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
