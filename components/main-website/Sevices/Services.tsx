@@ -1,7 +1,7 @@
 import {dancing_Script} from "@/fonts/googleFonts";
 import {GaugeCircle} from "@/components/animations/circles/GaugeCircles-UI";
 import {BlurFade} from "@/components/animations/Blur-Fade-Magic";
-import {servicesConfig} from "@/components/config/Services-config";
+import {servicesConfig} from "@/config/main-website-config/Services-config";
 
 
 

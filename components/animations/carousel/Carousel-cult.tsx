@@ -19,7 +19,7 @@ import {
 } from "framer-motion"
 
 import { cn } from "@/utils/tailwindConfig/utils"
-import {menuItem} from "@/components/config/navBarConfig";
+import {menuItem} from "@/config/main-website-config/navBarConfig";
 
 
 interface Tip {

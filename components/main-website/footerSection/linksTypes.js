@@ -42,7 +42,7 @@ const ClipPathLinks = () => {
 
 export const SocialMediaLinks = () => {
     return (
-        <div className="bg-[var(--color-accent-brand-yellow)] overflow-hidden text-black rounded-xl">
+        <div className="bg-[var(--color-accent-brand-yellow)]  overflow-hidden text-black rounded-xl">
             <div className="mx-auto max-w-7xl">
                 <div className="divide-y divide-neutral-900 border border-neutral-900">
 

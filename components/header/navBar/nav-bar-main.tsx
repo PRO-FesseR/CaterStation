@@ -5,9 +5,9 @@ import caterStationLogo from '@/public/logo/cater-station-nav-logo.png';
 import { Menu, MenuItem, ProductItem } from "@/components/header/navBar/navBar-menu";
 import { cn } from "@/utils/tailwindConfig/utils";
 import Image from "next/image";
-import { navItems } from "@/components/config/navBarConfig";
+import { navItems } from "@/config/main-website-config/navBarConfig";
 import { LinkPreview } from "@/components/Static-components/link-Preview/link-preview";
-import { InteractiveHoverButton } from "@/components/Static-components/button/button";
+import { InteractiveHoverButton } from "@/components/Static-components/button/signUpButton";
 import { Magnetic } from "@/components/animations/Magnetic-motion";
 import { SideBar } from "@/components/header/navBar/NavBar-Mobile";
 import Link from "next/link";
@@ -77,7 +77,7 @@ function Navbar({ className }: { className?: string }) {
                                         className="text-neutral-700! flex items-center hover:text-[#223454]! gap-2 hover:scale-105 transition"
                                         key={menu.name}
                                         url={menu.href}
-                                    >
+                                     isHome={true}>
 
                                         {menu.logo && <menu.logo />}
                                         {menu.name}

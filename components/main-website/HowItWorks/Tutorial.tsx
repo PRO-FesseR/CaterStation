@@ -6,7 +6,7 @@ import booking from '@/public/How It Works/booking.png';
 import execution from '@/public/How It Works/execution.png';
 import feedback from '@/public/How It Works/feedback.png';
 import {dancing_Script} from "@/fonts/googleFonts";
-import TutorialDeskTop from "@/components/body/HowItWorks/TutorialDeskTop";
+import TutorialDeskTop from "@/components/main-website/HowItWorks/TutorialDeskTop";
 
 
 export default function HowItWorks() {

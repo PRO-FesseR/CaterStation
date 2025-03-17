@@ -4,7 +4,7 @@ import React from 'react';
 
 import BlurIn from "@/components/animations/text-animations/blur-in";
 import {dancing_Script} from "@/fonts/googleFonts";
-import {ContactLinks, SocialLinks, SocialMediaLinks} from "@/components/body/footerSection/linksTypes";
+import {ContactLinks, SocialLinks, SocialMediaLinks} from "@/components/main-website/footerSection/linksTypes";
 
 
 const FooterSection = () => {

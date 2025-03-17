@@ -10,7 +10,7 @@ import {
 import ScrollingTestimonials from "@/components/Static-components/Testimonial-Parralex/Testimony-marqueue";
 import {dancing_Script} from "@/fonts/googleFonts";
 import {BlurFade} from "@/components/animations/Blur-Fade-Magic";
-import {reviewConfig} from "@/components/config/ReviewsConfig";
+import {reviewConfig} from "@/config/main-website-config/ReviewsConfig";
 
 export const HeroParallax = () => {
 

@@ -5,7 +5,7 @@ import {TextLoop} from "@/components/animations/Text-loop-motion";
 import HeroForm from "@/components/Static-components/forms/Hero-form";
 import {InfiniteSlider} from "@/components/animations/HorizontalSlider-motion";
 import Image from "next/image";
-import {HeroImages} from "@/components/config/Hero-Images";
+import {HeroImages} from "@/config/main-website-config/Hero-Images";
 
 
 

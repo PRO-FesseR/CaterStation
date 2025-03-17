@@ -19,6 +19,7 @@ type LinkPreviewProps = {
     height?: number;
     quality?: number;
     layout?: string;
+    isHome:boolean;
 } & (
     | { isStatic: true; imageSrc: string }
     | { isStatic?: false; imageSrc?: never }
@@ -30,14 +31,20 @@ export const LinkPreview = ({
                                 width = 200,
                                 height = 125,
                                 quality = 50,
+                                isHome = true,
                                 layout = "fixed",
                                 isStatic = false,
                                 imageSrc = "",
                             }: LinkPreviewProps) => {
     let src;
     if (!isStatic) {
+        let newUrl;
+        if(isHome){
+            newUrl=`${process.env.NEXT_PUBLIC_SITE_URL || "https://yourwebsite.com"}${url}`;
+
+        }
         const params = encode({
-            url:  decodeURIComponent(url),
+            url:  decodeURIComponent(newUrl || url),
             screenshot: true,
             meta: false,
             embed: "screenshot.url",
@@ -101,7 +108,7 @@ export const LinkPreview = ({
                         asChild
                         onMouseMove={handleMouseMove}
                     >
-                          <span className="text-black m-0 text-lg  flex items-center gap-2  font-light dark:text-white">
+                          <span className="text-black m-0 text-lg hover:scale-105 transition  flex items-center gap-2  font-light dark:text-white">
 
                             {children}
 

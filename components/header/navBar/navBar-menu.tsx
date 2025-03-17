@@ -5,7 +5,7 @@ import Link, { LinkProps } from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import {menuItem} from "@/components/config/navBarConfig";
+import {menuItem} from "@/config/main-website-config/navBarConfig";
 
 const transition = {
     type: "spring",
@@ -284,10 +284,12 @@ export const SidebarLink = ({
                                 link,
                                 className,
                                 menuItem,
+                                setOpen,
                                 ...props
                             }: {
     className?: string;
-    link?:Links
+    link?:Links,
+    setOpen:(open:boolean)=>void,
     menuItem?:menuItem
     props?: LinkProps;
 }) => {
@@ -297,6 +299,7 @@ export const SidebarLink = ({
             return <Link
                 key={menuItem.name}
                 href={menuItem.href}
+                onClick={()=> setOpen(false)}
                 className={cn(
                     "flex items-center text-lg mt-[1%]  justify-start gap-2 group/sidebar py-2",
                     className
@@ -318,6 +321,7 @@ export const SidebarLink = ({
     })}
             {link && <Link
                 href={link.href}
+
                 className={cn(
                     "flex items-center justify-start gap-2  group/sidebar py-2",
                     className

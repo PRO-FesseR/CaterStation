@@ -1,4 +1,4 @@
-import OrbitingItems from "@/components/body/Vendor ShowCase/Orbiting Circles";
+import OrbitingItems from "@/components/main-website/Vendor ShowCase/Orbiting Circles";
 
 import vendor1 from '@/public/dummy vendors/vendor1.jpg'
 import vendor2 from '@/public/dummy vendors/vendor2.jpg'

@@ -4,8 +4,8 @@ import Link from "next/link";
 import LogoImage from '@/public/logo/cater-station-nav-logo.png'
 import Image from "next/image";
 import {Sidebar, SidebarBody, SidebarLink} from "@/components/header/navBar/navBar-menu";
-import {navItems} from "@/components/config/navBarConfig";
-import {InteractiveHoverButton} from "@/components/Static-components/button/button";
+import {navItems} from "@/config/main-website-config/navBarConfig";
+import {InteractiveHoverButton} from "@/components/Static-components/button/signUpButton";
 import {Magnetic} from "@/components/animations/Magnetic-motion";
 
 import { LoadingCarousel } from "@/components/animations/carousel/Carousel-cult"
@@ -20,11 +20,11 @@ export function SideBar(){
         <Sidebar  open={open} setOpen={setOpen}>
             <SidebarBody className="justify-between gap-10">
                 <div className="flex flex-col   overflow-x-hidden">
-                    {open ? <Logo/> : <LogoIcon/>}
+                    {open ? <Logo setOpen={setOpen}/> : <LogoIcon/>}
                     <div className=" grid grid-cols-2 gap-4 mt-7">
                         {navItems.map((menuItem, idx) => {
                             if (menuItem.menuId !== 2) {
-                                return <SidebarLink key={idx} menuItem={menuItem.menuItems}/>
+                                return <SidebarLink setOpen={setOpen} key={idx} menuItem={menuItem.menuItems}/>
                             } else {
                                 return ''
                             }
@@ -48,7 +48,7 @@ export function SideBar(){
                         />
                 </div>
                 <Magnetic>
-                    <InteractiveHoverButton className="w-full! " text="Sign up"/>
+                    <InteractiveHoverButton setOpen={setOpen} className="w-full! " text="Sign up"/>
                 </Magnetic>
                 {/*<SidebarLink*/}
                 {/*    link={{*/}
@@ -74,11 +74,12 @@ export function SideBar(){
 
 
 
-export const Logo = () => {
+export const Logo = ({setOpen}:{setOpen:(open:boolean)=>void}) => {
     return (
         <Link
-            href="#"
+            href="/"
             className="font-normal flex space-x-2 items-center text-sm text-black py-1 contrast-0 relative z-20"
+            onClick={()=>setOpen(false)}
         >
             <Image className="w-[6rem]" src={LogoImage} alt="logo"/>
         </Link>

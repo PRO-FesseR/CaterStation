@@ -34,13 +34,7 @@ export const navItems:natItemsType = [
         menuName:'Services',
         menuItemsType:0,
         menuItems:[
-            {
-                name:'Events',
-                href:'Area47',
-                src:'',
-                description:'',
-                logo:MdEvent
-            },
+
             {
                 name:'Packages',
                 href:'/',
@@ -109,12 +103,12 @@ export const navItems:natItemsType = [
     },
     {
         menuId:3,
-        menuName:'About',
+        menuName:'About Us',
         menuItemsType:0,
         menuItems:[
             {
-                name:'About Us',
-                href:'https://www.google.com',
+                name:'Our Mission',
+                href:'/',
                 src:'',
                 description:'',
                 logo:GoOrganization

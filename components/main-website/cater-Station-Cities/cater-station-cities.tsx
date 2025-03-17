@@ -5,7 +5,7 @@ import lahore from '@/public/dummy_locations/Lahore.jpg'
 import sialkot from '@/public/dummy_locations/sialkot.jpg'
 import islamabad from '@/public/dummy_locations/islamabad.jpg'
 import {dancing_Script} from "@/fonts/googleFonts";
-import { SlidingNumberFinal} from "@/components/body/cater-Station-Cities/slidingNumbers";
+import { SlidingNumberFinal} from "@/components/main-website/cater-Station-Cities/slidingNumbers";
 import {BlurFade} from "@/components/animations/Blur-Fade-Magic";
 
 const locations = [
